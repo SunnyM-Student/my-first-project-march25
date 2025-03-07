@@ -1,10 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Project</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is my first project using Cursor!</p>
+    <header>
+        <div class="container">
+            <h1>Welcome to My First Project</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="content">
+            <p>This is my first project using Cursor and GitHub!</p>
+            <a href="#" class="button" id="changeColorBtn">Click Me!</a>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h2>HTML5</h2>
+                <p>Built with modern HTML5 semantic elements for better structure and accessibility.</p>
+            </div>
+            <div class="feature-card">
+                <h2>CSS3</h2>
+                <p>Styled with CSS3 features including Grid, Flexbox, and CSS Variables.</p>
+            </div>
+            <div class="feature-card">
+                <h2>JavaScript</h2>
+                <p>Enhanced with interactive features using modern JavaScript.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Add some interactivity
+        document.getElementById('changeColorBtn').addEventListener('click', function() {
+            const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f1c40f', '#9b59b6'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.querySelector('header').style.backgroundColor = randomColor;
+        });
+    </script>
 </body>
 </html>
